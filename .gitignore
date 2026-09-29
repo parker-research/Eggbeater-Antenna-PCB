@@ -1,0 +1,9 @@
+# KiCad
+*-backups/
+*.kicad_prl
+fp-info-cache
+*.lck
+_autosave-*
+# raw fab outputs (the zipped copies are committed)
+fab/*/gerbers/
+__pycache__/
