@@ -450,7 +450,7 @@ def pad(num, at, size, layers, net=None, kind="smd", shape="rect", drill=None):
 def build_phasing_board(freq_mhz, outdir):
     dL = C0 / (4 * freq_mhz * 1e6 * math.sqrt(E_EFF)) * 1000  # mm
     W2 = 15.0                       # half width (board is 30 mm wide)
-    LB = 100.0                      # body length (tabs extend beyond)
+    LB = 99.0 - TAB_L               # body length; body + tabs = 99 mm (JLC <100 mm pricing)
     b = Board(f"phasing_{freq_mhz}", True, (50.0, 100.0))
 
     # ---- outline -----------------------------------------------------------
